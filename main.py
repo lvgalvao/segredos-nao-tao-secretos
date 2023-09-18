@@ -5,7 +5,7 @@ PASSWORD = 'senha123'
 #MEUS SEGREDOS
 OPENAI_KEY = "openai-XYZABCDE"
 AWS_SECRET = "aws-s3cr3tk3y"
-
+ 
 #MEU APP
 print(f"Meu email: {EMAIL}")
 print(f"Minha senha: {PASSWORD}")

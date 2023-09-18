@@ -7,6 +7,22 @@ Este projeto demonstra três abordagens diferentes para gerenciar informações 
 1. **Versão Hardcode (main.py)**
     
     Nesta versão, as variáveis sensíveis como chaves, senhas e outras informações são hardcoded diretamente no código. Esta prática não é recomendada, pois expõe informações valiosas e dificulta a manutenção e a portabilidade do código.
+
+    ```python
+    #DADOS SENSÍVEIS
+    EMAIL = 'lvgalvaofilho@gmail.com'
+    PASSWORD = 'senha123'
+
+    #MEUS SEGREDOS
+    OPENAI_KEY = "openai-XYZABCDE"
+    AWS_SECRET = "aws-s3cr3tk3y"
+    
+    #MEU APP
+    print(f"Meu email: {EMAIL}")
+    print(f"Minha senha: {PASSWORD}")
+    print(f"Minha Key Open AI: {OPENAI_KEY}")
+    print(f"Minha AWS Key: {AWS_SECRET}")
+    ```
     
 2. **Versão Export (main_02.py)**
     
@@ -15,7 +31,28 @@ Este projeto demonstra três abordagens diferentes para gerenciar informações 
     Exemplo:
     
     ```bash
-    export VARIAVEL_SECRETA="meu_valor_secreto"
+    export EMAIL=lvgalvaofilho@gmail.com
+    export PASSWORD=senha123
+    export AWS_SECRET=aws-s3cr3tk3y
+    export OPENAI_KEY=openai-XYZABCDE
+    ```
+
+    ```python
+    import os
+
+    #DADOS SENSÍVEIS
+    email = os.getenv('EMAIL')
+    password = os.getenv('PASSWORD')
+
+    #MEUS SEGREDOS
+    openai_key = os.getenv('OPENAI_KEY')
+    aws_secret = os.getenv('AWS_SECRET')
+    
+    #MEU APP
+    print(f"Meu email: {email}")
+    print(f"Minha senha: {password}")
+    print(f"Minha Key Open AI: {openai_key}")
+    print(f"Minha AWS Key: {aws_secret}")
     ```
     
 3. **Versão dotenv (main_03.py)**
@@ -25,8 +62,26 @@ Este projeto demonstra três abordagens diferentes para gerenciar informações 
     Exemplo de arquivo `.env`:
     
     ```makefile
-    VARIAVEL_SECRETA=meu_valor_secreto
-    OUTRA_VARIAVEL=outro_valor
+    EMAIL=lvgalvaofilho@gmail.com
+    PASSWORD=senha123
+    AWS_SECRET=aws-s3cr3tk3y
+    OPENAI_KEY=openai-XYZABCDE
+    ```
+    
+    ```python
+    #DADOS SENSÍVEIS
+    EMAIL = 'lvgalvaofilho@gmail.com'
+    PASSWORD = 'senha123'
+
+    #MEUS SEGREDOS
+    OPENAI_KEY = "openai-XYZABCDE"
+    AWS_SECRET = "aws-s3cr3tk3y"
+    
+    #MEU APP
+    print(f"Meu email: {EMAIL}")
+    print(f"Minha senha: {PASSWORD}")
+    print(f"Minha Key Open AI: {OPENAI_KEY}")
+    print(f"Minha AWS Key: {AWS_SECRET}")
     ```
     
     No código, as variáveis são carregadas através da biblioteca `dotenv`.

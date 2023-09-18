@@ -2,7 +2,7 @@
 
 ## Case
 
-Link: (Ei, posso te contar um segredo?)[https://www.linkedin.com/posts/lucianovasconcelosf_armazene-e-gerencie-segredos-como-chaves-activity-7109479947571769344-ptQe?utm_source=share&utm_medium=member_desktop]
+Link: [Ei, posso te contar um segredo?](https://www.linkedin.com/posts/lucianovasconcelosf_armazene-e-gerencie-segredos-como-chaves-activity-7109479947571769344-ptQe?utm_source=share&utm_medium=member_desktop)
 
 Este projeto demonstra três abordagens diferentes para gerenciar informações sensíveis em aplicações Python:
 

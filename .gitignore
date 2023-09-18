@@ -1,0 +1,8 @@
+# Vou deixar comentado para que o .env fique de exemplo, mas você vai descomentar!
+# .env
+# .env.dev
+# .env.prod
+# .env.qa
+
+#aproveita e coloca o .venv né
+.venv

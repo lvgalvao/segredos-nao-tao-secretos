@@ -69,19 +69,25 @@ Este projeto demonstra três abordagens diferentes para gerenciar informações 
     ```
     
     ```python
-    #DADOS SENSÍVEIS
-    EMAIL = 'lvgalvaofilho@gmail.com'
-    PASSWORD = 'senha123'
+    import os
+    from dotenv import load_dotenv
 
-    #MEUS SEGREDOS
-    OPENAI_KEY = "openai-XYZABCDE"
-    AWS_SECRET = "aws-s3cr3tk3y"
+    # Carrega as variáveis de ambiente do arquivo .env
+    load_dotenv()
+
+    # DADOS SENSÍVEIS
+    email = os.getenv('EMAIL')
+    password = os.getenv('PASSWORD')
+
+    # MEUS SEGREDOS
+    openai_key = os.getenv('OPENAI_KEY')
+    aws_secret = os.getenv('AWS_SECRET')
     
     #MEU APP
-    print(f"Meu email: {EMAIL}")
-    print(f"Minha senha: {PASSWORD}")
-    print(f"Minha Key Open AI: {OPENAI_KEY}")
-    print(f"Minha AWS Key: {AWS_SECRET}")
+    print(f"Meu email: {email}")
+    print(f"Minha senha: {password}")
+    print(f"Minha Key Open AI: {openai_key}")
+    print(f"Minha AWS Key: {aws_secret}")
     ```
     
     No código, as variáveis são carregadas através da biblioteca `dotenv`.
